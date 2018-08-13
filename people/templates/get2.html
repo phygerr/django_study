@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account_info</title>
+</head>
+<body>
+<h2>新增的账号为：</h2>
+{{context}}
+<h2>到现在为止已经注册的用户为：</h2>
+<ol>
+    {% for i in all %}
+    <li>{{i}}</li>
+    {% endfor %}
+</ol>
+</body>
+</html>

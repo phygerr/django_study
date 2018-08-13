@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+
+<body style="margin-top:0px">
+{% extends "index.html" %}
+{% block index %}
+<br>
+<form action="/search/" method="get">
+   <div class="col-lg-6" style="margin-left:20%">
+    <div class="input-group">
+    <input type="text" class="form-control" name="keyword" placeholder="请输入关键字">
+    <span class="input-group-btn">
+    <button class="btn btn-default" type="submit">Go!</button>
+    </span>
+    </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</form>
+<br>
+<hr style="height:3px;background-color:#ccc;">
+<br>
+    <!--<table border="5px" cellpadding="5px" cellspacing="5" width="400px">-->
+        <!--<tr><th>姓名</th><th>年龄</th></tr>-->
+        <!--{% for i in pp %}-->
+        <!--{% for j in aa %}-->
+        <!--<tr><td>{{i}}</td><td>{{j}}</td></tr>-->
+        <!--{% endfor %}-->
+        <!--{% endfor %}-->
+    <!--</table>-->
+
+
+     <table  class="table table-hover">
+        <tr><th>姓名</th><th>年龄</th></tr>
+        {% for i in pp %}
+        <tr><td>{{i.name}}</td><td>{{i.age}}</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+</body>
+</html>
