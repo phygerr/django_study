@@ -5,14 +5,53 @@
     <title>Account</title>
 </head>
 <body>
-<form action="/get2/" method="post">
-    账号：<input type="text" name="username"><br>
-    密码：<input type="password" name="password"><br>
-    邮箱：<input type="email" name="email"><br>
-    电话：<input type="tel" name="phone"><br>
-    <input type="reset">
-    <button><a href="/" style="text-decoration:none;color:black">返回</a></button>
-    <input type="submit" value="提交">
-</form>
+{% extends "index.html" %}
+{% block index %}
+
+<div class="container">
+    <br>
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">创建账号信息</a>
+  <div id="demo" class="collapse">
+  <form action="/do/" method="post">
+    <div class="form-group">
+      <label for="user">Username:</label>
+      <input type="text" class="form-control" id="user" name="username" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter Userage">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="password" class="form-control" id="email" name="email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+      <label for="password">Phone:</label>
+      <input type="password" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Remember me
+      </label>
+    </div>
+    <button type="reset" class="btn btn-primary">重置</button>
+    <button type="submit" class="btn btn-primary">提交</button>
+    <button class="btn btn-primary"><a href="/" style="text-decoration:none;color:black;color:white;">返回</a></button>
+  </form>
+
+<!--旧的样式-->
+<!--<form action="/get2/" method="post">-->
+    <!--账号：<input type="text" name="username"><br>-->
+    <!--密码：<input type="password" name="password"><br>-->
+    <!--邮箱：<input type="email" name="email"><br>-->
+    <!--电话：<input type="tel" name="phone"><br>-->
+    <!--<input type="reset">-->
+    <!--<button><a href="/" style="text-decoration:none;color:black">返回</a></button>-->
+    <!--<input type="submit" value="提交">-->
+<!--</form>-->
+</div>
+    </div>
+{% endblock %}
 </body>
 </html>

@@ -5,15 +5,34 @@
     <title>postinfo</title>
 </head>
 <body>
-<a href="/" style="color:black;text-decoration:none"><input type="button" value="返回"></a>
-<h2>新增的Person为：</h2>
-{{context.username}}<br>
-{{context.userage}}
-<h2>现有的Person为：</h2>
-<ol>
-{% for i in all %}
-<li>{{ i }}</li>
-{% endfor %}
-</ol>
+{% extends "index.html" %}
+{% block index %}
+
+ <div class="alert alert-success">
+    <strong>人员信息添加成功!</strong> 指定操作成功提示信息。
+  </div>
+<h4>新增的Person为：</h4>
+<div class="card bg-primary text-white">
+    <div class="card-body">Name:{{context.username}}<br>Age:{{context.userage}}</div>
+  </div>
+<br>
+<h4>现有的Person为：</h4>
+
+ <div class="card bg-success text-white">
+    <div class="card-body">
+        {% for i in all %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </div>
+  </div>
+
+
+<!--<ol>-->
+<!--{% for i in all %}-->
+<!--<li>{{ i }}</li>-->
+<!--{% endfor %}-->
+<!--</ol>-->
+
+{% endblock %}
 </body>
 </html>

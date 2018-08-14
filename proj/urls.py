@@ -15,6 +15,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from people import views as vv
+import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^insert/$', vv.insert),
@@ -23,7 +24,8 @@ urlpatterns = [
     url(r'^get2/$', vv.get2),
     url(r'^search1/$',vv.search1),
     url(r'^search/$',vv.search),
-    url('^$', vv.index),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
+    url('^$', vv.index),
 
 ]

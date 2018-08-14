@@ -5,11 +5,41 @@
     <title>Userinfo</title>
 </head>
 <body>
-<form action="/do/" method="post">
-    姓名：<input type="text" name="username"><br>
-    年龄：<input type="text" name="userage"><br>
-    <input type="reset">
-    <button type="submit">提交</button>
-</form>
+{% extends "index.html" %}
+{% block index %}
+
+
+<!--<form action="/do/" method="post">-->
+    <!--姓名：<input type="text" name="username"><br>-->
+    <!--年龄：<input type="text" name="userage"><br>-->
+    <!--<input type="reset">-->
+    <!--<button type="submit">提交</button>-->
+<!--</form>-->
+
+<div class="container">
+    <br>
+  <a href="#demo" class="btn btn-primary" data-toggle="collapse">插入新人信息</a>
+  <div id="demo" class="collapse">
+  <form action="/do/" method="post">
+    <div class="form-group">
+      <label for="user">Username:</label>
+      <input type="text" class="form-control" id="user" name="username" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+      <label for="age">Userage:</label>
+      <input type="password" class="form-control" id="age" name="userage" placeholder="Enter Userage">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+</div>
+
+
+{% endblock %}
 </body>
 </html>
