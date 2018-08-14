@@ -15,8 +15,11 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 <!--导航栏-->
-	<div class="container">
-		<br>
+
+  <a class="navbar-brand" href="/">
+    <img src="static/images/ppl.jpg" alt="logo" style="width:50px;">
+    <img src="" alt="">
+  </a>
   <!--<h2>胶囊</h2>-->
   <!--<p>胶囊导航:</p>-->
 
@@ -36,8 +39,15 @@
 	<li class="nav-item">
       <a class="nav-link disabled" href="/search1/">SearchPerson</a>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">注册/登录</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">注册</a>
+        <a class="dropdown-item" href="#">登录</a>
+        <a class="dropdown-item" href="#">登出</a></div>
+    </li>
   </ul>
-</div>
+
 </nav>
 {% block index %}
 <a href="/insert/">insertPerson</a><br>

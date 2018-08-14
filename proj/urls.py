@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^search/$',vv.search),
     url('^$', vv.index),
 
+
 ]

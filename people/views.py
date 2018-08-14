@@ -1,7 +1,16 @@
+#encoding:utf-8
 # Create your views here.
-from django.shortcuts import render
+from django.shortcuts import render,redirect,HttpResponseRedirect
 from models import Person,Account
 from django.db.models import Q
+from django.contrib import auth
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
+# 第四个auth是用户权限有关的类。auth可以设置每个用户的权限。
+from .forms import UserForm
+import time
+
 def insert(request):
     return render(request,'insert.html')
 def do(request):
@@ -37,6 +46,4 @@ def search(request):
     # rr=zip(pp,aa)
     # return render(request,'search_result.html',{'rr':rr})
     return render(request,'search_result.html',{'pp':person})
-
-
 
