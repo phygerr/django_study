@@ -39,6 +39,14 @@
       <a class="nav-link disabled" href="#">SearchPerson</a>
     </li>
     <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About Me</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="https://github.com/phygerr/">Github</a>
+        <a class="dropdown-item" href="http://www.cnblogs.com/phyger/">博客</a>
+        <a class="dropdown-item" href="#">XXX</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">注册/登录</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">注册</a>
@@ -87,14 +95,12 @@
 <!--实现鼠标滑过导航栏增加active类属性-->
 <script>
   $(document).ready(function(){
-    $('.nav-link').hover(
-      function(){
+    $('.nav-link , .dropdown-item').mouseenter(function(){
         $(this).addClass('active');
-      },
-      function(){
+      });
+    $('.nav-link , .dropdown-item').mouseleave(function(){
         $(this).removeClass('active');
-      }
-    );
+      });
   });
 </script>
 </body>
