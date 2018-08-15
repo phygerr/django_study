@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Account</title>
-</head>
-<body>
 {% extends "index.html" %}
+{% block title %}Account{% endblock %}
 {% block index %}
-
 <div class="container">
     <br>
   <a href="#demo" class="btn btn-primary" data-toggle="collapse">创建账号信息</a>
@@ -23,11 +16,11 @@
     </div>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="password" class="form-control" id="email" name="email" placeholder="Enter Email">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
     </div>
     <div class="form-group">
-      <label for="password">Phone:</label>
-      <input type="password" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
+      <label for="phone">Phone:</label>
+      <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone">
     </div>
 
     <div class="form-check">
@@ -53,5 +46,3 @@
 </div>
     </div>
 {% endblock %}
-</body>
-</html>

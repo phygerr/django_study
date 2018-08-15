@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>search</title>
-</head>
-
-<body style="margin-top:0px">
 {% extends "index.html" %}
+{% block title %}Search_Result{% endblock %}
 {% block index %}
 <br>
 <form action="/search/" method="get">
@@ -14,7 +7,7 @@
     <div class="input-group">
     <input type="text" class="form-control" name="keyword" placeholder="请输入关键字">
     <span class="input-group-btn">
-    <button class="btn btn-default" type="submit">Go!</button>
+    <button class="btn btn-default" id="go" type="submit">Go!</button>
     </span>
     </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
@@ -31,7 +24,6 @@
         <!--{% endfor %}-->
     <!--</table>-->
 
-
      <table  class="table table-hover">
         <tr><th>姓名</th><th>年龄</th></tr>
         {% for i in pp %}
@@ -39,5 +31,3 @@
         {% endfor %}
     </table>
 {% endblock %}
-</body>
-</html>

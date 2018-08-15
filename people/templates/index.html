@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Index</title>
+  <title>{% block title %}Index{% endblock %}</title>
   <meta charset="utf-8">
   <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 <!--导航栏-->
 
   <a class="navbar-brand" href="/">
-    <img src="static/images/ppl.jpg" alt="logo" style="width:50px;">
+    {% block ico %}<img src="/static/images/ppl.jpg" alt="logo" style="width:50px;"> {% endblock %}
   </a>
   <!--<h2>胶囊</h2>-->
   <!--<p>胶囊导航:</p>-->
